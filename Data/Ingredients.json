@@ -1,0 +1,120 @@
+{
+  "Ingredients": [
+    {
+      "IngredientName": "Bacon",
+      "Violates": [
+        "Pescatarian",
+        "Vegan",
+        "Vegetarian"
+      ]
+    },
+    {
+      "IngredientName": "Eggs",
+      "Violates": [
+        "Vegan"
+      ]
+    },
+    {
+      "IngredientName": "Flour",
+      "Violates": [
+        "GlutenFree"
+      ]
+    },
+    {
+      "IngredientName": "Butter",
+      "Violates": [
+        "Vegan",
+        "LactoseFree"
+      ]
+    },
+    {
+      "IngredientName": "Chicken",
+      "Violates": [
+        "Pescatarian",
+        "Vegetarian",
+        "Vegan"
+      ]
+    },
+    {
+      "IngredientName": "Pork",
+      "Violates": [
+        "Pescatarian",
+        "Vegetarian",
+        "Vegan"
+      ]
+    },
+    {
+      "IngredientName": "Beef",
+      "Violates": [
+        "Pescatarian",
+        "Vegetarian",
+        "Vegan"
+      ]
+    },
+    {
+      "IngredientName": "Turkey",
+      "Violates": [
+        "Pescatarian",
+        "Vegetarian",
+        "Vegan"
+      ]
+    },
+    {
+      "IngredientName": "Lamb",
+      "Violates": [
+        "Pescatarian",
+        "Vegetarian",
+        "Vegan"
+      ]
+    },
+    {
+      "IngredientName": "Shrimp",
+      "Violates": [
+        "Vegetarian",
+        "Vegan"
+      ]
+    },
+    {
+      "IngredientName": "Apples",
+      "Violates": [
+      ]
+    },
+    {
+      "IngredientName": "Sugar",
+      "Violates": [
+      ]
+    },
+    {
+      "IngredientName": "Baking powder",
+      "Violates": [
+      ]
+    },
+    {
+      "IngredientName": "Tortillas",
+      "Violates": [
+      ]
+    },
+    {
+      "IngredientName": "Oil",
+      "Violates": [
+      ]
+    },
+    {
+      "IngredientName": "Cheese",
+      "Violates": [
+        "LactoseFree",
+        "Vegan"
+      ]
+    },
+    {
+      "IngredientName": "Chili powder",
+      "Violates": [
+      ]
+    },
+    {
+      "IngredientName": "Tomatoes",
+      "Violates": [
+      ]
+    }
+  ]
+}

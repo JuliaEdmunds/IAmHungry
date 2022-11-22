@@ -1,0 +1,34 @@
+{
+  "Name": "Chicken tortilla",
+  "Ingredients": [
+    {
+      "Amount": "4",
+      "Name": "Tortillas"
+    },
+    {
+      "Amount": "300g",
+      "Name": "Chicken"
+    },
+    {
+      "Amount": "2 tbsp",
+      "Name": "Oil"
+    },
+    {
+      "Amount": "175g",
+      "Name": "Cheese"
+    },
+    {
+      "Amount": "2 tsp",
+      "Name": "Chili powder"
+    },
+    {
+      "Amount": "2",
+      "Name": "Tomatoes"
+    }
+  ],
+  "MealType": "Snack",
+  "TasteTags": [
+    "Savoury",
+    "Spicy"
+  ]
+}

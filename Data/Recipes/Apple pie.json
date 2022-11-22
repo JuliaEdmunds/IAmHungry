@@ -1,0 +1,33 @@
+{
+  "Name": "Apple pie",
+  "Ingredients": [
+    {
+      "Amount": "1",
+      "Name": "Eggs"
+    },
+    {
+      "Amount": "320g",
+      "Name": "Flour"
+    },
+    {
+      "Amount": "1.5kg",
+      "Name": "Apples"
+    },
+    {
+      "Amount": "200g",
+      "Name": "Butter"
+    },
+    {
+      "Amount": "80g",
+      "Name": "Sugar"
+    },
+    {
+      "Amount": "2 tsp",
+      "Name": "Baking powder"
+    }
+  ],
+  "MealType": "Dessert",
+  "TasteTags": [
+    "Sweet"
+  ]
+}

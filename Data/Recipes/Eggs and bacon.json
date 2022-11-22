@@ -1,0 +1,17 @@
+{
+  "Name": "Eggs and bacon",
+  "Ingredients": [
+    {
+      "Amount": "2",
+      "Name": "Eggs"
+    },
+    {
+      "Amount": "4 slices of",
+      "Name": "Bacon"
+    }
+  ],
+  "MealType": "Main",
+  "TasteTags": [
+    "Savoury"
+  ]
+}

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAmHungry", "IAmHungry\IAmH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin", "Admin\Admin.csproj", "{43D5A7F0-A2EF-4A64-B26E-430EA7A7467E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLogic", "CommonLogic\CommonLogic.csproj", "{903CDD4F-DC54-4FFB-AD42-65CD5FD866BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{43D5A7F0-A2EF-4A64-B26E-430EA7A7467E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43D5A7F0-A2EF-4A64-B26E-430EA7A7467E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43D5A7F0-A2EF-4A64-B26E-430EA7A7467E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{903CDD4F-DC54-4FFB-AD42-65CD5FD866BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{903CDD4F-DC54-4FFB-AD42-65CD5FD866BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{903CDD4F-DC54-4FFB-AD42-65CD5FD866BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{903CDD4F-DC54-4FFB-AD42-65CD5FD866BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

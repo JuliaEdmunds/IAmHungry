@@ -76,5 +76,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLogic\CommonLogic.csproj">
+      <Project>{903cdd4f-dc54-4ffb-ad42-65cd5fd866be}</Project>
+      <Name>CommonLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

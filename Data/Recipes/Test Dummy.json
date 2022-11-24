@@ -1,0 +1,21 @@
+{
+  "Name": "Test Dummy",
+  "Ingredients": [
+    {
+      "Name": "Chimken",
+      "Amount": "100g"
+    },
+    {
+      "Name": "Salt",
+      "Amount": "tsp"
+    },
+    {
+      "Name": "Love",
+      "Amount": "700g"
+    }
+  ],
+  "MealType": "main",
+  "TasteTags": [
+    "savoury"
+  ]
+}

@@ -54,11 +54,12 @@ namespace IAmHungry
 
         private static void LoadAllRecipes()
         {
-            string[] fileNames = Directory.GetFiles("C:\\Users\\julia\\Desktop\\Personal Projects\\IAmHungry\\Data\\Recipes");
-            for (int i = 0; i < fileNames.Length; i++)
+            string[] filePaths = Directory.GetFiles("C:\\Users\\julia\\Desktop\\Personal Projects\\IAmHungry\\Data\\Recipes");
+            for (int i = 0; i < filePaths.Length; i++)
             {
-                string currentFileName = fileNames[i];
-                string json = File.ReadAllText(currentFileName);
+                string currentFilePaths = filePaths[i];
+                string currentFileName = Path.GetFileNameWithoutExtension(currentFilePaths);
+                string json = File.ReadAllText(currentFilePaths);
 
                 JsonSerializerOptions options = new JsonSerializerOptions
                 {
@@ -69,6 +70,7 @@ namespace IAmHungry
                 };
 
                 Recipe currentRecipe = JsonSerializer.Deserialize<Recipe>(json, options);
+                currentRecipe.FileName = currentFileName;
                 List<IngredientQuantityData> currentIngredients = currentRecipe.Ingredients;
 
                 // finds associated Ingredient for each ingredientdata in recipe
@@ -135,6 +137,20 @@ namespace IAmHungry
             while (ValidRecipes[randomRecipeIndex] == CurrentRecipe);
 
             return ValidRecipes[randomRecipeIndex];
+        }
+
+        public static Recipe FindRecipeWithFileName(string fileName)
+        {
+            for (int i = 0; i < AllRecipeList.Count; i++)
+            {
+                Recipe currentRecipe = AllRecipeList[i];
+                if (currentRecipe.FileName == fileName)
+                {
+                    return currentRecipe;
+                }
+            }
+
+            return null;
         }
     }
 }

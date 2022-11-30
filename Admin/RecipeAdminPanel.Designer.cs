@@ -70,7 +70,7 @@
             // 
             this.btnAddIngredients.Location = new System.Drawing.Point(12, 90);
             this.btnAddIngredients.Name = "btnAddIngredients";
-            this.btnAddIngredients.Size = new System.Drawing.Size(126, 30);
+            this.btnAddIngredients.Size = new System.Drawing.Size(124, 46);
             this.btnAddIngredients.TabIndex = 4;
             this.btnAddIngredients.Text = "Add ingredient";
             this.btnAddIngredients.UseVisualStyleBackColor = true;
@@ -81,8 +81,9 @@
             this.flwIngredients.AutoScroll = true;
             this.flwIngredients.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flwIngredients.Location = new System.Drawing.Point(153, 90);
+            this.flwIngredients.Margin = new System.Windows.Forms.Padding(0);
             this.flwIngredients.Name = "flwIngredients";
-            this.flwIngredients.Size = new System.Drawing.Size(635, 155);
+            this.flwIngredients.Size = new System.Drawing.Size(635, 108);
             this.flwIngredients.TabIndex = 5;
             // 
             // txtFileName

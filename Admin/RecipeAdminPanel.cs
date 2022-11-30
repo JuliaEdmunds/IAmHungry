@@ -34,6 +34,29 @@ namespace Admin
 
             // Setup all text fields according to current values in m_CurrentRecipe
             txtRecipeName.Text = m_CurrentRecipe.Name;
+            txtFileName.Text = m_CurrentRecipe.FileName;
+
+            // Load ingredients - ask Charlie how to make them editable?
+            List<IngredientQuantityData> currentIngredients = m_CurrentRecipe.Ingredients;
+            for (int i = 0; i < currentIngredients.Count; i++)
+            {
+                TextBox txtIngredientName = new TextBox();
+                Label lblName = new Label();
+                lblName.Text = "Name";
+                txtIngredientName.Text = currentIngredients[i].Name;
+
+                TextBox txtIngredientAmount = new TextBox();
+                Label lblAmount = new Label();
+                lblAmount.Text = "Amount";
+                txtIngredientAmount.Text = currentIngredients[i].Amount;
+
+
+                flwIngredients.Controls.Add(lblName);
+                flwIngredients.Controls.Add(txtIngredientName);
+
+                flwIngredients.Controls.Add(lblAmount);
+                flwIngredients.Controls.Add(txtIngredientAmount);
+            }
         }
 
         // TODO: Load current ingredients as UI input (creating txt for each of the existing ingredients) - editable

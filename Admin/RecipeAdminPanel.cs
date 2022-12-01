@@ -36,19 +36,21 @@ namespace Admin
             txtRecipeName.Text = m_CurrentRecipe.Name;
             txtFileName.Text = m_CurrentRecipe.FileName;
 
-            // Load ingredients - ask Charlie how to make them editable?
+            // Load current ingredients as UI input (creating txt for each of the existing ingredients) - editable
             List<IngredientQuantityData> currentIngredients = m_CurrentRecipe.Ingredients;
             for (int i = 0; i < currentIngredients.Count; i++)
             {
+                IngredientQuantityData currentIngredient = currentIngredients[i];
+
                 TextBox txtIngredientName = new TextBox();
                 Label lblName = new Label();
                 lblName.Text = "Name";
-                txtIngredientName.Text = currentIngredients[i].Name;
+                txtIngredientName.Text = currentIngredient.Name;
 
                 TextBox txtIngredientAmount = new TextBox();
                 Label lblAmount = new Label();
                 lblAmount.Text = "Amount";
-                txtIngredientAmount.Text = currentIngredients[i].Amount;
+                txtIngredientAmount.Text = currentIngredient.Amount;
 
 
                 flwIngredients.Controls.Add(lblName);
@@ -56,10 +58,11 @@ namespace Admin
 
                 flwIngredients.Controls.Add(lblAmount);
                 flwIngredients.Controls.Add(txtIngredientAmount);
+
+                txtIngredientName.TextChanged += (_, __) => { TxtIngredientName_TextChanged(txtIngredientName, currentIngredient); };
+                txtIngredientAmount.TextChanged += (_, __) => { TxtIngredientAmount_TextChanged(txtIngredientAmount, currentIngredient); };
             }
         }
-
-        // TODO: Load current ingredients as UI input (creating txt for each of the existing ingredients) - editable
 
         // TODO: Be able to remove ingredients (dynamically add a delete button for each ingredient - remove UI & data)
 

@@ -6,16 +6,12 @@
       "Amount": "100g"
     },
     {
-      "Name": "Pepper",
-      "Amount": "tsp"
-    },
-    {
       "Name": "Love",
       "Amount": "700g"
     },
     {
-      "Name": "Hate",
-      "Amount": "0.5g"
+      "Name": "Pepper",
+      "Amount": "1tsp"
     }
   ],
   "MealType": "main",

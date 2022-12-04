@@ -52,6 +52,8 @@ namespace Admin
                 lblAmount.Text = "Amount";
                 txtIngredientAmount.Text = currentIngredient.Amount;
 
+                Button btnDeleteIngredient = new Button();
+                btnDeleteIngredient.Text = "Delete";
 
                 flwIngredients.Controls.Add(lblName);
                 flwIngredients.Controls.Add(txtIngredientName);
@@ -59,8 +61,12 @@ namespace Admin
                 flwIngredients.Controls.Add(lblAmount);
                 flwIngredients.Controls.Add(txtIngredientAmount);
 
+                flwIngredients.Controls.Add(btnDeleteIngredient);
+
                 txtIngredientName.TextChanged += (_, __) => { TxtIngredientName_TextChanged(txtIngredientName, currentIngredient); };
                 txtIngredientAmount.TextChanged += (_, __) => { TxtIngredientAmount_TextChanged(txtIngredientAmount, currentIngredient); };
+
+                btnDeleteIngredient.Click += (_, __) => { BtnDeleteIngredient_Click(btnDeleteIngredient, lblName, txtIngredientName, lblAmount, txtIngredientAmount, currentIngredient); };
             }
         }
 
@@ -110,6 +116,9 @@ namespace Admin
             Label lblName = new Label();
             lblName.Text = "Name";
 
+            Button btnDeleteIngredient = new Button();
+            btnDeleteIngredient.Text = "Delete";
+
             txtIngredientName.TextChanged += (_, __) => { TxtIngredientName_TextChanged(txtIngredientName, ingredientQuantityData); };
             txtIngredientAmount.TextChanged += (_, __) => { TxtIngredientAmount_TextChanged(txtIngredientAmount, ingredientQuantityData); };
 
@@ -118,6 +127,23 @@ namespace Admin
 
             flwIngredients.Controls.Add(lblAmount);
             flwIngredients.Controls.Add(txtIngredientAmount);
+
+            flwIngredients.Controls.Add(btnDeleteIngredient);
+
+            btnDeleteIngredient.Click += (_, __) => { BtnDeleteIngredient_Click(btnDeleteIngredient, lblName, txtIngredientName, lblAmount, txtIngredientAmount, ingredientQuantityData); };
+        }
+
+        private void BtnDeleteIngredient_Click(Button btnDeleteIngredient, Label lblName, TextBox textBoxName, Label lblAmount, TextBox textBoxAmount, IngredientQuantityData ingredientQuantityData)
+        {
+            m_CurrentRecipe.Ingredients.Remove(ingredientQuantityData);
+
+            flwIngredients.Controls.Remove(lblName);
+            flwIngredients.Controls.Remove(textBoxName);
+
+            flwIngredients.Controls.Remove(lblAmount);
+            flwIngredients.Controls.Remove(textBoxAmount);
+
+            flwIngredients.Controls.Remove(btnDeleteIngredient);
         }
 
         private void TxtIngredientAmount_TextChanged(TextBox textBox, IngredientQuantityData ingredientQuantityData)

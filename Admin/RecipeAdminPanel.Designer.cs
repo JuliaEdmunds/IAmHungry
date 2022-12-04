@@ -83,7 +83,7 @@
             this.flwIngredients.Location = new System.Drawing.Point(153, 90);
             this.flwIngredients.Margin = new System.Windows.Forms.Padding(0);
             this.flwIngredients.Name = "flwIngredients";
-            this.flwIngredients.Size = new System.Drawing.Size(635, 108);
+            this.flwIngredients.Size = new System.Drawing.Size(635, 215);
             this.flwIngredients.TabIndex = 5;
             // 
             // txtFileName

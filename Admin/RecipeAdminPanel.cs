@@ -66,11 +66,10 @@ namespace Admin
                 txtIngredientName.TextChanged += (_, __) => { TxtIngredientName_TextChanged(txtIngredientName, currentIngredient); };
                 txtIngredientAmount.TextChanged += (_, __) => { TxtIngredientAmount_TextChanged(txtIngredientAmount, currentIngredient); };
 
+                // Remove ingredients (dynamically add a delete button for each ingredient - remove UI & data)
                 btnDeleteIngredient.Click += (_, __) => { BtnDeleteIngredient_Click(btnDeleteIngredient, lblName, txtIngredientName, lblAmount, txtIngredientAmount, currentIngredient); };
             }
         }
-
-        // TODO: Be able to remove ingredients (dynamically add a delete button for each ingredient - remove UI & data)
 
         // TODO: Add remaining fields to fill in for the Recipe
 
@@ -130,6 +129,7 @@ namespace Admin
 
             flwIngredients.Controls.Add(btnDeleteIngredient);
 
+            // Remove ingredients (dynamically add a delete button for each ingredient - remove UI & data)
             btnDeleteIngredient.Click += (_, __) => { BtnDeleteIngredient_Click(btnDeleteIngredient, lblName, txtIngredientName, lblAmount, txtIngredientAmount, ingredientQuantityData); };
         }
 

@@ -13,13 +13,11 @@ using System.Text.Json.Serialization;
 using IAmHungry;
 using System.Xml.Linq;
 
-// TODO: Support adding pics via url (url in the recipe)
-
-// TODO: Add new admin panel which allows to pick which recipe (file) to edit
+// TODO: Add new admin panel which allows to pick which recipe (file) to edit - DONE
 
 // TODO: Allow creating the new recipe from the new (^) admin panel
 
-// Check if there's no conflict between lower/CamelCase ETaste/ETypes
+// TODO: Add recipe instruction
 
 // TODO: Change the file name - stretch goal
 
@@ -33,15 +31,14 @@ namespace Admin
 
         private Recipe m_CurrentRecipe;
 
-        public RecipeAdminPanel()
+        public RecipeAdminPanel(string currentRecipeFileName)
         {
             InitializeComponent();
+            CurrentRecipeFileName = currentRecipeFileName;
         }
 
         private void RecipeAdminPanel_Load(object sender, EventArgs e)
         {
-            CurrentRecipeFileName = "Test Dummy";
-
             // Find recipe with matching name from RecipeDatabase
             m_CurrentRecipe = RecipeDataBase.FindRecipeWithFileName(CurrentRecipeFileName);
 
@@ -132,7 +129,11 @@ namespace Admin
             string jsonString = JsonSerializer.Serialize(m_CurrentRecipe, options);
             string filePath = GetFilePath(CurrentRecipeFileName);
             File.WriteAllText(filePath, jsonString);
-            this.Close();
+
+            this.Dispose();
+
+            RecipeAdminSelect recipeAdminSelect = new RecipeAdminSelect();
+            recipeAdminSelect.ShowDialog();
         }
 
         private string GetFilePath(string fileName)

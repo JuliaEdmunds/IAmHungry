@@ -64,11 +64,11 @@
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnSave.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSave.Location = new System.Drawing.Point(564, 400);
+            this.btnSave.Location = new System.Drawing.Point(654, 400);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(224, 38);
+            this.btnSave.Size = new System.Drawing.Size(134, 38);
             this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Save and Close";
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 

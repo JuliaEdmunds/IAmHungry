@@ -1,34 +1,34 @@
 {
-  "Url": "https://images.unsplash.com/photo-1572383672419-ab35444a6934?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+  "Url": "https://images.unsplash.com/photo-1572383672419-ab35444a6934?ixlib=rb-4.0.3\u0026ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8\u0026auto=format\u0026fit=crop\u0026w=580\u0026q=80",
   "Name": "Apple pie",
   "Ingredients": [
     {
-      "Amount": "1",
-      "Name": "Eggs"
+      "Name": "Eggs",
+      "Amount": "1"
     },
     {
-      "Amount": "320g",
-      "Name": "Flour"
+      "Name": "Flour",
+      "Amount": "320g"
     },
     {
-      "Amount": "1.5kg",
-      "Name": "Apples"
+      "Name": "Apples",
+      "Amount": "1.5kg"
     },
     {
-      "Amount": "200g",
-      "Name": "Butter"
+      "Name": "Butter",
+      "Amount": "200g"
     },
     {
-      "Amount": "80g",
-      "Name": "Sugar"
+      "Name": "Sugar",
+      "Amount": "80g"
     },
     {
-      "Amount": "2 tsp",
-      "Name": "Baking powder"
+      "Name": "Baking powder",
+      "Amount": "2 tsp"
     }
   ],
-  "MealType": "Dessert",
+  "MealType": "dessert",
   "TasteTags": [
-    "Sweet"
+    "sweet"
   ]
 }

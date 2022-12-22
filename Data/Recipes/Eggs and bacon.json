@@ -1,18 +1,18 @@
 {
-  "Url": "https://images.unsplash.com/photo-1608475861994-cf7af0f0c1be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+  "Url": "https://images.unsplash.com/photo-1608475861994-cf7af0f0c1be?ixlib=rb-4.0.3\u0026ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8\u0026auto=format\u0026fit=crop\u0026w=870\u0026q=80",
   "Name": "Eggs and bacon",
   "Ingredients": [
     {
-      "Amount": "2",
-      "Name": "Eggs"
+      "Name": "Eggs",
+      "Amount": "2"
     },
     {
-      "Amount": "4 slices of",
-      "Name": "Bacon"
+      "Name": "Bacon",
+      "Amount": "4 slices of"
     }
   ],
-  "MealType": "Main",
+  "MealType": "main",
   "TasteTags": [
-    "Savoury"
+    "savoury"
   ]
 }

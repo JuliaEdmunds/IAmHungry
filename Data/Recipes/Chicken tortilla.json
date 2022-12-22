@@ -1,35 +1,35 @@
 {
-  "Url": "https://images.unsplash.com/photo-1582234363542-ee64d0ccb0d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+  "Url": "https://images.unsplash.com/photo-1582234363542-ee64d0ccb0d5?ixlib=rb-4.0.3\u0026ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8\u0026auto=format\u0026fit=crop\u0026w=580\u0026q=80",
   "Name": "Chicken tortilla",
   "Ingredients": [
     {
-      "Amount": "4",
-      "Name": "Tortillas"
+      "Name": "Tortillas",
+      "Amount": "4"
     },
     {
-      "Amount": "300g",
-      "Name": "Chicken"
+      "Name": "Chicken",
+      "Amount": "300g"
     },
     {
-      "Amount": "2 tbsp",
-      "Name": "Oil"
+      "Name": "Oil",
+      "Amount": "2 tbsp"
     },
     {
-      "Amount": "175g",
-      "Name": "Cheese"
+      "Name": "Cheese",
+      "Amount": "175g"
     },
     {
-      "Amount": "2 tsp",
-      "Name": "Chili powder"
+      "Name": "Chili powder",
+      "Amount": "2 tsp"
     },
     {
-      "Amount": "2",
-      "Name": "Tomatoes"
+      "Name": "Tomatoes",
+      "Amount": "2"
     }
   ],
-  "MealType": "Snack",
+  "MealType": "snack",
   "TasteTags": [
-    "Savoury",
-    "Spicy"
+    "savoury",
+    "spicy"
   ]
 }

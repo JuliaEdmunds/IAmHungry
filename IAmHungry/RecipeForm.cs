@@ -28,6 +28,9 @@ namespace IAmHungry
             lblIngredientList.Text = string.Empty;
             string recipeName = RecipeDataBase.CurrentRecipe.Name;
             lblRecipeName.Text = recipeName;
+            string url = RecipeDataBase.CurrentRecipe.Url;
+            pbRecipePic.Load(url);
+
             List<IngredientQuantityData> currentIngredients = RecipeDataBase.CurrentRecipe.Ingredients;
             string bullet = "\t\u2022";
             for (int i = 0; i < currentIngredients.Count; i++)

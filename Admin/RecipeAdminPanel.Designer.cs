@@ -33,14 +33,20 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnAddIngredients = new System.Windows.Forms.Button();
             this.flwIngredients = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtFileName = new System.Windows.Forms.TextBox();
             this.lblFileName = new System.Windows.Forms.Label();
+            this.lblFileNameText = new System.Windows.Forms.Label();
+            this.lblMealType = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboMealType = new System.Windows.Forms.ComboBox();
+            this.clbTaste = new System.Windows.Forms.CheckedListBox();
+            this.lblUrl = new System.Windows.Forms.Label();
+            this.txtUrl = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblRecipeName
             // 
             this.lblRecipeName.AutoSize = true;
-            this.lblRecipeName.Location = new System.Drawing.Point(12, 52);
+            this.lblRecipeName.Location = new System.Drawing.Point(12, 41);
             this.lblRecipeName.Name = "lblRecipeName";
             this.lblRecipeName.Size = new System.Drawing.Size(107, 20);
             this.lblRecipeName.TabIndex = 0;
@@ -48,11 +54,11 @@
             // 
             // txtRecipeName
             // 
-            this.txtRecipeName.Location = new System.Drawing.Point(153, 49);
+            this.txtRecipeName.Location = new System.Drawing.Point(153, 38);
             this.txtRecipeName.Name = "txtRecipeName";
             this.txtRecipeName.Size = new System.Drawing.Size(635, 26);
             this.txtRecipeName.TabIndex = 1;
-            this.txtRecipeName.TextChanged += new System.EventHandler(this.txtFileName_TextChanged);
+            this.txtRecipeName.TextChanged += new System.EventHandler(this.txtRecipeName_TextChanged);
             // 
             // btnSave
             // 
@@ -68,7 +74,7 @@
             // 
             // btnAddIngredients
             // 
-            this.btnAddIngredients.Location = new System.Drawing.Point(12, 90);
+            this.btnAddIngredients.Location = new System.Drawing.Point(12, 123);
             this.btnAddIngredients.Name = "btnAddIngredients";
             this.btnAddIngredients.Size = new System.Drawing.Size(124, 46);
             this.btnAddIngredients.TabIndex = 4;
@@ -80,34 +86,96 @@
             // 
             this.flwIngredients.AutoScroll = true;
             this.flwIngredients.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flwIngredients.Location = new System.Drawing.Point(153, 90);
+            this.flwIngredients.Location = new System.Drawing.Point(153, 123);
             this.flwIngredients.Margin = new System.Windows.Forms.Padding(0);
             this.flwIngredients.Name = "flwIngredients";
-            this.flwIngredients.Size = new System.Drawing.Size(635, 215);
+            this.flwIngredients.Size = new System.Drawing.Size(635, 226);
             this.flwIngredients.TabIndex = 5;
-            // 
-            // txtFileName
-            // 
-            this.txtFileName.Location = new System.Drawing.Point(153, 11);
-            this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(635, 26);
-            this.txtFileName.TabIndex = 7;
             // 
             // lblFileName
             // 
             this.lblFileName.AutoSize = true;
-            this.lblFileName.Location = new System.Drawing.Point(12, 14);
+            this.lblFileName.Location = new System.Drawing.Point(12, 6);
             this.lblFileName.Name = "lblFileName";
             this.lblFileName.Size = new System.Drawing.Size(82, 20);
             this.lblFileName.TabIndex = 6;
             this.lblFileName.Text = "File name:";
+            // 
+            // lblFileNameText
+            // 
+            this.lblFileNameText.AutoSize = true;
+            this.lblFileNameText.Location = new System.Drawing.Point(153, 5);
+            this.lblFileNameText.Name = "lblFileNameText";
+            this.lblFileNameText.Size = new System.Drawing.Size(21, 20);
+            this.lblFileNameText.TabIndex = 7;
+            this.lblFileNameText.Text = "...";
+            // 
+            // lblMealType
+            // 
+            this.lblMealType.AutoSize = true;
+            this.lblMealType.Location = new System.Drawing.Point(447, 353);
+            this.lblMealType.Name = "lblMealType";
+            this.lblMealType.Size = new System.Drawing.Size(81, 20);
+            this.lblMealType.TabIndex = 8;
+            this.lblMealType.Text = "Meal type:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 353);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Taste tags:";
+            // 
+            // cboMealType
+            // 
+            this.cboMealType.FormattingEnabled = true;
+            this.cboMealType.Location = new System.Drawing.Point(588, 353);
+            this.cboMealType.Name = "cboMealType";
+            this.cboMealType.Size = new System.Drawing.Size(121, 28);
+            this.cboMealType.TabIndex = 10;
+            this.cboMealType.SelectedIndexChanged += new System.EventHandler(this.cboMealType_SelectedIndexChanged);
+            // 
+            // clbTaste
+            // 
+            this.clbTaste.CheckOnClick = true;
+            this.clbTaste.FormattingEnabled = true;
+            this.clbTaste.Location = new System.Drawing.Point(153, 352);
+            this.clbTaste.Name = "clbTaste";
+            this.clbTaste.Size = new System.Drawing.Size(237, 73);
+            this.clbTaste.TabIndex = 12;
+            this.clbTaste.SelectedIndexChanged += new System.EventHandler(this.clbTaste_SelectedIndexChanged);
+            // 
+            // lblUrl
+            // 
+            this.lblUrl.AutoSize = true;
+            this.lblUrl.Location = new System.Drawing.Point(12, 74);
+            this.lblUrl.Name = "lblUrl";
+            this.lblUrl.Size = new System.Drawing.Size(87, 20);
+            this.lblUrl.TabIndex = 13;
+            this.lblUrl.Text = "Recipe pic:";
+            // 
+            // txtUrl
+            // 
+            this.txtUrl.Location = new System.Drawing.Point(153, 74);
+            this.txtUrl.Name = "txtUrl";
+            this.txtUrl.Size = new System.Drawing.Size(635, 26);
+            this.txtUrl.TabIndex = 14;
+            this.txtUrl.TextChanged += new System.EventHandler(this.txtUrl_TextChanged);
             // 
             // RecipeAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtFileName);
+            this.Controls.Add(this.txtUrl);
+            this.Controls.Add(this.lblUrl);
+            this.Controls.Add(this.clbTaste);
+            this.Controls.Add(this.cboMealType);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblMealType);
+            this.Controls.Add(this.lblFileNameText);
             this.Controls.Add(this.lblFileName);
             this.Controls.Add(this.flwIngredients);
             this.Controls.Add(this.btnAddIngredients);
@@ -129,8 +197,14 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnAddIngredients;
         private System.Windows.Forms.FlowLayoutPanel flwIngredients;
-        private System.Windows.Forms.TextBox txtFileName;
         private System.Windows.Forms.Label lblFileName;
+        private System.Windows.Forms.Label lblFileNameText;
+        private System.Windows.Forms.Label lblMealType;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboMealType;
+        private System.Windows.Forms.CheckedListBox clbTaste;
+        private System.Windows.Forms.Label lblUrl;
+        private System.Windows.Forms.TextBox txtUrl;
     }
 }
 

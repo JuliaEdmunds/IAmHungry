@@ -1,10 +1,7 @@
 {
+  "Url": "https://images.unsplash.com/photo-1582281298055-e25b84a30b0b?ixlib=rb-4.0.3\u0026ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8\u0026auto=format\u0026fit=crop\u0026w=605\u0026q=80",
   "Name": "Test Dummy",
   "Ingredients": [
-    {
-      "Name": "Chimken",
-      "Amount": "100g"
-    },
     {
       "Name": "Love",
       "Amount": "700g"
@@ -12,10 +9,14 @@
     {
       "Name": "Pepper",
       "Amount": "1tsp"
+    },
+    {
+      "Name": "Chimken is back",
+      "Amount": "100g"
     }
   ],
-  "MealType": "main",
+  "MealType": "snack",
   "TasteTags": [
-    "savoury"
+    "sweet"
   ]
 }

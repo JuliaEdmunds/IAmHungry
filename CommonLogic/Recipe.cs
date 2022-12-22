@@ -12,6 +12,8 @@ namespace IAmHungry
         [JsonIgnore]
         public string FileName { get; set; }
 
+        public string Url { get; set; }
+
         public string Name { get; set; }
         public List<IngredientQuantityData> Ingredients { get; set; }
 

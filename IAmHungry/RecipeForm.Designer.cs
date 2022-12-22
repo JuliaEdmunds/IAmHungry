@@ -44,6 +44,7 @@
             this.pbRecipePic.Location = new System.Drawing.Point(25, 91);
             this.pbRecipePic.Name = "pbRecipePic";
             this.pbRecipePic.Size = new System.Drawing.Size(483, 453);
+            this.pbRecipePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbRecipePic.TabIndex = 0;
             this.pbRecipePic.TabStop = false;
             // 

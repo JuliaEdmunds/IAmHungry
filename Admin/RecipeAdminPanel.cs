@@ -11,6 +11,19 @@ using System.Windows.Forms;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using IAmHungry;
+using System.Xml.Linq;
+
+// TODO: Support adding pics via url (url in the recipe)
+
+// TODO: Add new admin panel which allows to pick which recipe (file) to edit
+
+// TODO: Allow creating the new recipe from the new (^) admin panel
+
+// Check if there's no conflict between lower/CamelCase ETaste/ETypes
+
+// TODO: Change the file name - stretch goal
+
+// TODO: Add way of editing ingredients (it has to have its own admin panel) - very similar to the current one - stretch goal
 
 namespace Admin
 {
@@ -34,7 +47,35 @@ namespace Admin
 
             // Setup all text fields according to current values in m_CurrentRecipe
             txtRecipeName.Text = m_CurrentRecipe.Name;
-            txtFileName.Text = m_CurrentRecipe.FileName;
+            lblFileNameText.Text = m_CurrentRecipe.FileName;
+            txtUrl.Text = m_CurrentRecipe.Url;
+
+            string[] typeNames = Enum.GetNames(typeof(EMealType));
+            for (int i = 0; i < typeNames.Length; i++)
+            {
+                cboMealType.Items.Add(typeNames[i]);
+            }
+            cboMealType.Text = m_CurrentRecipe.MealType.ToString();
+
+            // Add all possible taste tags and check the taste tags currently set in the recipe
+            string[] tasteNames = Enum.GetNames(typeof(ETaste));
+            List<ETaste> currentTasteTags = m_CurrentRecipe.TasteTags;
+            for (int i = 0; i < tasteNames.Length; i++)
+            {
+                string currentTasteString = tasteNames[i];
+                clbTaste.Items.Add(currentTasteString);
+                ETaste currentTaste; 
+                Enum.TryParse(currentTasteString, out currentTaste);
+
+                for (int j = 0; j < currentTasteTags.Count; j++)
+                {
+                    ETaste currentTasteInRecipe = currentTasteTags[j];
+                    if (currentTaste == currentTasteInRecipe)
+                    {
+                        clbTaste.SetItemChecked(i, true);
+                    }
+                }
+            }
 
             // Load current ingredients as UI input (creating txt for each of the existing ingredients) - editable
             List<IngredientQuantityData> currentIngredients = m_CurrentRecipe.Ingredients;
@@ -71,11 +112,7 @@ namespace Admin
             }
         }
 
-        // TODO: Add remaining fields to fill in for the Recipe
-
-        // Check if there's no conflict between lower/CamelCase ETaste/ETypes
-
-        private void txtFileName_TextChanged(object sender, EventArgs e)
+        private void txtRecipeName_TextChanged(object sender, EventArgs e)
         {
             m_CurrentRecipe.Name = txtRecipeName.Text;
         }
@@ -154,6 +191,27 @@ namespace Admin
         private void TxtIngredientName_TextChanged(TextBox textBox, IngredientQuantityData ingredientQuantityData)
         {
             ingredientQuantityData.Name = textBox.Text;
+        }
+
+        private void cboMealType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string mealTypeAsString = cboMealType.Items[cboMealType.SelectedIndex].ToString();
+            m_CurrentRecipe.MealType = (EMealType)Enum.Parse(typeof(EMealType), mealTypeAsString, true);
+        }
+
+        private void clbTaste_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            m_CurrentRecipe.TasteTags.Clear();
+            for (int i = 0; i < clbTaste.CheckedItems.Count; i++)
+            {
+                string tasteTagAsString = (string)clbTaste.CheckedItems[i];
+                m_CurrentRecipe.TasteTags.Add((ETaste)Enum.Parse(typeof(ETaste), tasteTagAsString, true));
+            }
+        }
+
+        private void txtUrl_TextChanged(object sender, EventArgs e)
+        {
+            m_CurrentRecipe.Url = txtUrl.Text;
         }
     }
 }

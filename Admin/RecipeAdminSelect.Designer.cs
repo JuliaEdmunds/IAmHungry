@@ -74,7 +74,7 @@
             this.btnAddRecipe.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAddRecipe.Location = new System.Drawing.Point(29, 251);
             this.btnAddRecipe.Name = "btnAddRecipe";
-            this.btnAddRecipe.Size = new System.Drawing.Size(149, 37);
+            this.btnAddRecipe.Size = new System.Drawing.Size(171, 37);
             this.btnAddRecipe.TabIndex = 3;
             this.btnAddRecipe.Text = "Add new recipe ++";
             this.btnAddRecipe.UseVisualStyleBackColor = false;

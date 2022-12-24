@@ -61,7 +61,7 @@ namespace Admin
             {
                 string currentTasteString = tasteNames[i];
                 clbTaste.Items.Add(currentTasteString);
-                ETaste currentTaste; 
+                ETaste currentTaste;
                 Enum.TryParse(currentTasteString, out currentTaste);
 
                 for (int j = 0; j < currentTasteTags.Count; j++)

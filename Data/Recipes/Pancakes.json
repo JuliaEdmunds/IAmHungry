@@ -1,0 +1,26 @@
+{
+  "Url": "https://static.onecms.io/wp-content/uploads/sites/43/2022/02/16/21014-Good-old-Fashioned-Pancakes-mfs_001.jpg",
+  "Name": "Pancakes",
+  "Ingredients": [
+    {
+      "Name": "Flour",
+      "Amount": "100g"
+    },
+    {
+      "Name": "Milk",
+      "Amount": "300ml"
+    },
+    {
+      "Name": "Oil",
+      "Amount": "1 tbsp"
+    },
+    {
+      "Name": "Eggs",
+      "Amount": "2"
+    }
+  ],
+  "MealType": "snack",
+  "TasteTags": [
+    "sweet"
+  ]
+}

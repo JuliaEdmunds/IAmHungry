@@ -83,11 +83,11 @@
             // lblNewRecipe
             // 
             this.lblNewRecipe.AutoSize = true;
-            this.lblNewRecipe.Location = new System.Drawing.Point(12, 137);
+            this.lblNewRecipe.Location = new System.Drawing.Point(6, 137);
             this.lblNewRecipe.Name = "lblNewRecipe";
-            this.lblNewRecipe.Size = new System.Drawing.Size(504, 20);
+            this.lblNewRecipe.Size = new System.Drawing.Size(527, 20);
             this.lblNewRecipe.TabIndex = 4;
-            this.lblNewRecipe.Text = "If creating new recipe enter file name below and click \"Add new recipe\"";
+            this.lblNewRecipe.Text = "If creating new recipe enter recipe name below and click \"Add new recipe\"";
             // 
             // txtNewRecipeName
             // 

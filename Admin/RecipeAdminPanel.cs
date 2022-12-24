@@ -64,48 +64,55 @@ namespace Admin
                 ETaste currentTaste;
                 Enum.TryParse(currentTasteString, out currentTaste);
 
-                for (int j = 0; j < currentTasteTags.Count; j++)
+                if (currentTasteTags != null)
                 {
-                    ETaste currentTasteInRecipe = currentTasteTags[j];
-                    if (currentTaste == currentTasteInRecipe)
+                    for (int j = 0; j < currentTasteTags.Count; j++)
                     {
-                        clbTaste.SetItemChecked(i, true);
+                        ETaste currentTasteInRecipe = currentTasteTags[j];
+                        if (currentTaste == currentTasteInRecipe)
+                        {
+                            clbTaste.SetItemChecked(i, true);
+                        }
                     }
                 }
             }
 
             // Load current ingredients as UI input (creating txt for each of the existing ingredients) - editable
             List<IngredientQuantityData> currentIngredients = m_CurrentRecipe.Ingredients;
-            for (int i = 0; i < currentIngredients.Count; i++)
+
+            if (currentIngredients != null)
             {
-                IngredientQuantityData currentIngredient = currentIngredients[i];
+                for (int i = 0; i < currentIngredients.Count; i++)
+                {
+                    IngredientQuantityData currentIngredient = currentIngredients[i];
 
-                TextBox txtIngredientName = new TextBox();
-                Label lblName = new Label();
-                lblName.Text = "Name";
-                txtIngredientName.Text = currentIngredient.Name;
+                    TextBox txtIngredientName = new TextBox();
+                    Label lblName = new Label();
+                    lblName.Text = "Name";
+                    txtIngredientName.Text = currentIngredient.Name;
 
-                TextBox txtIngredientAmount = new TextBox();
-                Label lblAmount = new Label();
-                lblAmount.Text = "Amount";
-                txtIngredientAmount.Text = currentIngredient.Amount;
+                    TextBox txtIngredientAmount = new TextBox();
+                    Label lblAmount = new Label();
+                    lblAmount.Text = "Amount";
+                    txtIngredientAmount.Text = currentIngredient.Amount;
 
-                Button btnDeleteIngredient = new Button();
-                btnDeleteIngredient.Text = "Delete";
+                    Button btnDeleteIngredient = new Button();
+                    btnDeleteIngredient.Text = "Delete";
 
-                flwIngredients.Controls.Add(lblName);
-                flwIngredients.Controls.Add(txtIngredientName);
+                    flwIngredients.Controls.Add(lblName);
+                    flwIngredients.Controls.Add(txtIngredientName);
 
-                flwIngredients.Controls.Add(lblAmount);
-                flwIngredients.Controls.Add(txtIngredientAmount);
+                    flwIngredients.Controls.Add(lblAmount);
+                    flwIngredients.Controls.Add(txtIngredientAmount);
 
-                flwIngredients.Controls.Add(btnDeleteIngredient);
+                    flwIngredients.Controls.Add(btnDeleteIngredient);
 
-                txtIngredientName.TextChanged += (_, __) => { TxtIngredientName_TextChanged(txtIngredientName, currentIngredient); };
-                txtIngredientAmount.TextChanged += (_, __) => { TxtIngredientAmount_TextChanged(txtIngredientAmount, currentIngredient); };
+                    txtIngredientName.TextChanged += (_, __) => { TxtIngredientName_TextChanged(txtIngredientName, currentIngredient); };
+                    txtIngredientAmount.TextChanged += (_, __) => { TxtIngredientAmount_TextChanged(txtIngredientAmount, currentIngredient); };
 
-                // Remove ingredients (dynamically add a delete button for each ingredient - remove UI & data)
-                btnDeleteIngredient.Click += (_, __) => { BtnDeleteIngredient_Click(btnDeleteIngredient, lblName, txtIngredientName, lblAmount, txtIngredientAmount, currentIngredient); };
+                    // Remove ingredients (dynamically add a delete button for each ingredient - remove UI & data)
+                    btnDeleteIngredient.Click += (_, __) => { BtnDeleteIngredient_Click(btnDeleteIngredient, lblName, txtIngredientName, lblAmount, txtIngredientAmount, currentIngredient); };
+                }
             }
         }
 
@@ -144,6 +151,12 @@ namespace Admin
         private void btnAddIngredients_Click(object sender, EventArgs e)
         {
             IngredientQuantityData ingredientQuantityData = new IngredientQuantityData();
+
+            if (m_CurrentRecipe.Ingredients == null )
+            {
+                m_CurrentRecipe.Ingredients = new List<IngredientQuantityData>();
+            }
+
             m_CurrentRecipe.Ingredients.Add(ingredientQuantityData);
 
             TextBox txtIngredientAmount = new TextBox();
@@ -202,7 +215,13 @@ namespace Admin
 
         private void clbTaste_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (m_CurrentRecipe.TasteTags == null)
+            {
+                m_CurrentRecipe.TasteTags = new List<ETaste>();
+            }
+
             m_CurrentRecipe.TasteTags.Clear();
+
             for (int i = 0; i < clbTaste.CheckedItems.Count; i++)
             {
                 string tasteTagAsString = (string)clbTaste.CheckedItems[i];

@@ -75,11 +75,14 @@ namespace IAmHungry
 
                 // finds associated Ingredient for each ingredientdata in recipe
 
-                for (int j = 0; j < currentIngredients.Count; j++)
+                if (currentIngredients != null)
                 {
-                    IngredientQuantityData currentIngredient = currentIngredients[j];
-                    string currentIngredientName = currentIngredient.Name;
-                    currentIngredient.AssociatedIngredient = FindAssociatedIngredient(currentIngredientName);
+                    for (int j = 0; j < currentIngredients.Count; j++)
+                    {
+                        IngredientQuantityData currentIngredient = currentIngredients[j];
+                        string currentIngredientName = currentIngredient.Name;
+                        currentIngredient.AssociatedIngredient = FindAssociatedIngredient(currentIngredientName);
+                    }
                 }
 
                 AllRecipeList.Add(currentRecipe);

@@ -44,5 +44,23 @@ namespace Admin
 
             CurrentRecipeFileName = cboChooseRecipe.SelectedItem.ToString();
         }
+
+        private void txtNewRecipeName_TextChanged(object sender, EventArgs e)
+        {
+            btnAddRecipe.Enabled = true;
+
+            txtNewRecipeName.Text = CurrentRecipeFileName;
+        }
+
+        // TODO: Update to create new recipe
+        private void btnAddRecipe_Click(object sender, EventArgs e)
+        {
+            RecipeAdminPanel recipeAdminPanel = new RecipeAdminPanel(CurrentRecipeFileName);
+            recipeAdminPanel.ShowDialog();
+
+            this.Close();
+        }
+
+      
     }
 }

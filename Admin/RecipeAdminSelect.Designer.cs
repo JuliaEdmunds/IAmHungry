@@ -31,6 +31,9 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.lblSelectRecipe = new System.Windows.Forms.Label();
             this.cboChooseRecipe = new System.Windows.Forms.ComboBox();
+            this.btnAddRecipe = new System.Windows.Forms.Button();
+            this.lblNewRecipe = new System.Windows.Forms.Label();
+            this.txtNewRecipeName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnEdit
@@ -64,11 +67,44 @@
             this.cboChooseRecipe.TabIndex = 2;
             this.cboChooseRecipe.SelectedIndexChanged += new System.EventHandler(this.cboChooseRecipe_SelectedIndexChanged);
             // 
+            // btnAddRecipe
+            // 
+            this.btnAddRecipe.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnAddRecipe.Enabled = false;
+            this.btnAddRecipe.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAddRecipe.Location = new System.Drawing.Point(29, 251);
+            this.btnAddRecipe.Name = "btnAddRecipe";
+            this.btnAddRecipe.Size = new System.Drawing.Size(149, 37);
+            this.btnAddRecipe.TabIndex = 3;
+            this.btnAddRecipe.Text = "Add new recipe ++";
+            this.btnAddRecipe.UseVisualStyleBackColor = false;
+            this.btnAddRecipe.Click += new System.EventHandler(this.btnAddRecipe_Click);
+            // 
+            // lblNewRecipe
+            // 
+            this.lblNewRecipe.AutoSize = true;
+            this.lblNewRecipe.Location = new System.Drawing.Point(12, 137);
+            this.lblNewRecipe.Name = "lblNewRecipe";
+            this.lblNewRecipe.Size = new System.Drawing.Size(504, 20);
+            this.lblNewRecipe.TabIndex = 4;
+            this.lblNewRecipe.Text = "If creating new recipe enter file name below and click \"Add new recipe\"";
+            // 
+            // txtNewRecipeName
+            // 
+            this.txtNewRecipeName.Location = new System.Drawing.Point(16, 177);
+            this.txtNewRecipeName.Name = "txtNewRecipeName";
+            this.txtNewRecipeName.Size = new System.Drawing.Size(500, 26);
+            this.txtNewRecipeName.TabIndex = 5;
+            this.txtNewRecipeName.TextChanged += new System.EventHandler(this.txtNewRecipeName_TextChanged);
+            // 
             // RecipeAdminSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 307);
+            this.Controls.Add(this.txtNewRecipeName);
+            this.Controls.Add(this.lblNewRecipe);
+            this.Controls.Add(this.btnAddRecipe);
             this.Controls.Add(this.cboChooseRecipe);
             this.Controls.Add(this.lblSelectRecipe);
             this.Controls.Add(this.btnEdit);
@@ -85,5 +121,8 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label lblSelectRecipe;
         private System.Windows.Forms.ComboBox cboChooseRecipe;
+        private System.Windows.Forms.Button btnAddRecipe;
+        private System.Windows.Forms.Label lblNewRecipe;
+        private System.Windows.Forms.TextBox txtNewRecipeName;
     }
 }

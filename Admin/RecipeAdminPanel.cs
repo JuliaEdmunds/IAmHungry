@@ -13,9 +13,6 @@ using System.Text.Json.Serialization;
 using IAmHungry;
 using System.Xml.Linq;
 
-// TODO: Add new admin panel which allows to pick which recipe (file) to edit - DONE
-
-// TODO: Allow creating the new recipe from the new (^) admin panel - NEXT TODO - still unsure how to approach
 
 // TODO: Add recipe instruction
 

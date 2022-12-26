@@ -21,6 +21,8 @@ namespace IAmHungry
 
         public List<ETaste> TasteTags { get; set; }
 
+        public string[] Instructions { get; set; }
+
         public override string ToString()
         {
             return Name;

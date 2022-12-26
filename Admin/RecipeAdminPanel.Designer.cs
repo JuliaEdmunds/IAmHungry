@@ -41,6 +41,8 @@
             this.clbTaste = new System.Windows.Forms.CheckedListBox();
             this.lblUrl = new System.Windows.Forms.Label();
             this.txtUrl = new System.Windows.Forms.TextBox();
+            this.lblInstructions = new System.Windows.Forms.Label();
+            this.txtInstructions = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblRecipeName
@@ -56,7 +58,7 @@
             // 
             this.txtRecipeName.Location = new System.Drawing.Point(153, 38);
             this.txtRecipeName.Name = "txtRecipeName";
-            this.txtRecipeName.Size = new System.Drawing.Size(635, 26);
+            this.txtRecipeName.Size = new System.Drawing.Size(953, 26);
             this.txtRecipeName.TabIndex = 1;
             this.txtRecipeName.TextChanged += new System.EventHandler(this.txtRecipeName_TextChanged);
             // 
@@ -64,7 +66,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnSave.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSave.Location = new System.Drawing.Point(654, 400);
+            this.btnSave.Location = new System.Drawing.Point(972, 640);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(134, 38);
             this.btnSave.TabIndex = 2;
@@ -89,7 +91,7 @@
             this.flwIngredients.Location = new System.Drawing.Point(153, 123);
             this.flwIngredients.Margin = new System.Windows.Forms.Padding(0);
             this.flwIngredients.Name = "flwIngredients";
-            this.flwIngredients.Size = new System.Drawing.Size(635, 226);
+            this.flwIngredients.Size = new System.Drawing.Size(953, 226);
             this.flwIngredients.TabIndex = 5;
             // 
             // lblFileName
@@ -113,7 +115,7 @@
             // lblMealType
             // 
             this.lblMealType.AutoSize = true;
-            this.lblMealType.Location = new System.Drawing.Point(447, 353);
+            this.lblMealType.Location = new System.Drawing.Point(447, 364);
             this.lblMealType.Name = "lblMealType";
             this.lblMealType.Size = new System.Drawing.Size(81, 20);
             this.lblMealType.TabIndex = 8;
@@ -122,7 +124,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 353);
+            this.label1.Location = new System.Drawing.Point(12, 364);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 9;
@@ -131,7 +133,7 @@
             // cboMealType
             // 
             this.cboMealType.FormattingEnabled = true;
-            this.cboMealType.Location = new System.Drawing.Point(588, 353);
+            this.cboMealType.Location = new System.Drawing.Point(588, 364);
             this.cboMealType.Name = "cboMealType";
             this.cboMealType.Size = new System.Drawing.Size(121, 28);
             this.cboMealType.TabIndex = 10;
@@ -141,7 +143,7 @@
             // 
             this.clbTaste.CheckOnClick = true;
             this.clbTaste.FormattingEnabled = true;
-            this.clbTaste.Location = new System.Drawing.Point(153, 352);
+            this.clbTaste.Location = new System.Drawing.Point(153, 363);
             this.clbTaste.Name = "clbTaste";
             this.clbTaste.Size = new System.Drawing.Size(237, 73);
             this.clbTaste.TabIndex = 12;
@@ -160,15 +162,36 @@
             // 
             this.txtUrl.Location = new System.Drawing.Point(153, 74);
             this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(635, 26);
+            this.txtUrl.Size = new System.Drawing.Size(953, 26);
             this.txtUrl.TabIndex = 14;
             this.txtUrl.TextChanged += new System.EventHandler(this.txtUrl_TextChanged);
+            // 
+            // lblInstructions
+            // 
+            this.lblInstructions.AutoSize = true;
+            this.lblInstructions.Location = new System.Drawing.Point(12, 477);
+            this.lblInstructions.Name = "lblInstructions";
+            this.lblInstructions.Size = new System.Drawing.Size(96, 20);
+            this.lblInstructions.TabIndex = 15;
+            this.lblInstructions.Text = "Instructions:";
+            // 
+            // txtInstructions
+            // 
+            this.txtInstructions.Location = new System.Drawing.Point(153, 471);
+            this.txtInstructions.Multiline = true;
+            this.txtInstructions.Name = "txtInstructions";
+            this.txtInstructions.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txtInstructions.Size = new System.Drawing.Size(953, 151);
+            this.txtInstructions.TabIndex = 0;
+            this.txtInstructions.TextChanged += new System.EventHandler(this.txtInstructions_TextChanged);
             // 
             // RecipeAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1118, 690);
+            this.Controls.Add(this.txtInstructions);
+            this.Controls.Add(this.lblInstructions);
             this.Controls.Add(this.txtUrl);
             this.Controls.Add(this.lblUrl);
             this.Controls.Add(this.clbTaste);
@@ -205,6 +228,8 @@
         private System.Windows.Forms.CheckedListBox clbTaste;
         private System.Windows.Forms.Label lblUrl;
         private System.Windows.Forms.TextBox txtUrl;
+        private System.Windows.Forms.Label lblInstructions;
+        private System.Windows.Forms.TextBox txtInstructions;
     }
 }
 

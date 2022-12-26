@@ -111,6 +111,16 @@ namespace Admin
                     btnDeleteIngredient.Click += (_, __) => { BtnDeleteIngredient_Click(btnDeleteIngredient, lblName, txtIngredientName, lblAmount, txtIngredientAmount, currentIngredient); };
                 }
             }
+
+            // Load current instructions 
+            string[] currentInstructions = m_CurrentRecipe.Instructions;
+            string bullet = "\t\u2022";
+            for (int i = 0; i < currentInstructions.Length; i++)
+            {
+                string currentLine = currentInstructions[i];
+                string textToPrint = $"{bullet} {currentLine}\r\n";
+                txtInstructions.Text += textToPrint;
+            }
         }
 
         private void txtRecipeName_TextChanged(object sender, EventArgs e)
@@ -229,6 +239,14 @@ namespace Admin
         private void txtUrl_TextChanged(object sender, EventArgs e)
         {
             m_CurrentRecipe.Url = txtUrl.Text;
+        }
+
+        private void txtInstructions_TextChanged(object sender, EventArgs e)
+        {
+            string[] stringSeparators = new string[] { "\r\n" };
+            string textToSave = txtInstructions.Text;
+            string[] fullTextToSave = textToSave.Split(stringSeparators, StringSplitOptions.None);
+            m_CurrentRecipe.Instructions = fullTextToSave;
         }
     }
 }

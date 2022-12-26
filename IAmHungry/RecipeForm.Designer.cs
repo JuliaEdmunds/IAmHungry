@@ -32,10 +32,10 @@
             this.btbChangeSearch = new System.Windows.Forms.Button();
             this.lblIngredients = new System.Windows.Forms.Label();
             this.lblIngredientList = new System.Windows.Forms.Label();
-            this.lblRecipeInstruction = new System.Windows.Forms.Label();
             this.lblInstruction = new System.Windows.Forms.Label();
             this.btnKeepSearching = new System.Windows.Forms.Button();
             this.lblRecipeName = new System.Windows.Forms.Label();
+            this.txtInstruction = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbRecipePic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,15 +78,6 @@
             this.lblIngredientList.Size = new System.Drawing.Size(517, 180);
             this.lblIngredientList.TabIndex = 6;
             // 
-            // lblRecipeInstruction
-            // 
-            this.lblRecipeInstruction.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblRecipeInstruction.Location = new System.Drawing.Point(531, 287);
-            this.lblRecipeInstruction.Name = "lblRecipeInstruction";
-            this.lblRecipeInstruction.Size = new System.Drawing.Size(517, 311);
-            this.lblRecipeInstruction.TabIndex = 7;
-            this.lblRecipeInstruction.Text = "Recipe instruction";
-            // 
             // lblInstruction
             // 
             this.lblInstruction.AutoSize = true;
@@ -120,15 +111,25 @@
             this.lblRecipeName.TabIndex = 10;
             this.lblRecipeName.Text = "Recipe name";
             // 
+            // txtInstruction
+            // 
+            this.txtInstruction.Location = new System.Drawing.Point(531, 291);
+            this.txtInstruction.Multiline = true;
+            this.txtInstruction.Name = "txtInstruction";
+            this.txtInstruction.ReadOnly = true;
+            this.txtInstruction.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtInstruction.Size = new System.Drawing.Size(517, 253);
+            this.txtInstruction.TabIndex = 11;
+            // 
             // RecipeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1070, 688);
+            this.Controls.Add(this.txtInstruction);
             this.Controls.Add(this.lblRecipeName);
             this.Controls.Add(this.btnKeepSearching);
             this.Controls.Add(this.lblInstruction);
-            this.Controls.Add(this.lblRecipeInstruction);
             this.Controls.Add(this.lblIngredientList);
             this.Controls.Add(this.lblIngredients);
             this.Controls.Add(this.btbChangeSearch);
@@ -148,9 +149,9 @@
         private System.Windows.Forms.Button btbChangeSearch;
         private System.Windows.Forms.Label lblIngredients;
         private System.Windows.Forms.Label lblIngredientList;
-        private System.Windows.Forms.Label lblRecipeInstruction;
         private System.Windows.Forms.Label lblInstruction;
         private System.Windows.Forms.Button btnKeepSearching;
         private System.Windows.Forms.Label lblRecipeName;
+        private System.Windows.Forms.TextBox txtInstruction;
     }
 }

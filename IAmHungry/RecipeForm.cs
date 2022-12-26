@@ -39,6 +39,14 @@ namespace IAmHungry
                 string textToPrint = $"{bullet} {currentData.Amount} {currentData.Name.ToLower()}\n";
                 lblIngredientList.Text += textToPrint;
             }
+
+            string[] currentInstructions = RecipeDataBase.CurrentRecipe.Instructions;
+            for (int i = 0; i < currentInstructions.Length; i++)
+            {
+                string currentLine = currentInstructions[i];
+                string textToPrint = $"{bullet} {currentLine}\r\n";
+                txtInstruction.Text += textToPrint;
+            }
         }
 
         private void btbChangeSearch_Click(object sender, EventArgs e)

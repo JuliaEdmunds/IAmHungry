@@ -113,13 +113,16 @@
             // 
             // txtInstruction
             // 
+            this.txtInstruction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInstruction.Location = new System.Drawing.Point(531, 291);
+            this.txtInstruction.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.txtInstruction.Multiline = true;
             this.txtInstruction.Name = "txtInstruction";
             this.txtInstruction.ReadOnly = true;
             this.txtInstruction.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtInstruction.Size = new System.Drawing.Size(517, 253);
             this.txtInstruction.TabIndex = 11;
+            this.txtInstruction.Text = "Recipe instructions";
             // 
             // RecipeForm
             // 

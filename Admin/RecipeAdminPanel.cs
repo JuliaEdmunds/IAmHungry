@@ -14,8 +14,6 @@ using IAmHungry;
 using System.Xml.Linq;
 
 
-// TODO: Add recipe instruction
-
 // TODO: Change the file name - stretch goal
 
 // TODO: Add way of editing ingredients (it has to have its own admin panel) - very similar to the current one - stretch goal
@@ -114,13 +112,15 @@ namespace Admin
 
             // Load current instructions 
             string[] currentInstructions = m_CurrentRecipe.Instructions;
-            string bullet = "\t\u2022";
-            for (int i = 0; i < currentInstructions.Length; i++)
+            if (currentInstructions != null)
             {
-                string currentLine = currentInstructions[i];
-                string textToPrint = $"{bullet} {currentLine}\r\n";
-                txtInstructions.Text += textToPrint;
-            }
+                for (int i = 0; i < currentInstructions.Length; i++)
+                {
+                    string currentLine = currentInstructions[i];
+                    string textToPrint = $"{currentLine}\r\n";
+                    txtInstructions.Text += textToPrint;
+                }
+            }      
         }
 
         private void txtRecipeName_TextChanged(object sender, EventArgs e)

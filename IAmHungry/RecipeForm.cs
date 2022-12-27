@@ -30,6 +30,7 @@ namespace IAmHungry
             lblRecipeName.Text = recipeName;
             string url = RecipeDataBase.CurrentRecipe.Url;
             pbRecipePic.Load(url);
+            txtInstruction.Text = string.Empty;
 
             List<IngredientQuantityData> currentIngredients = RecipeDataBase.CurrentRecipe.Ingredients;
             string bullet = "\t\u2022";
@@ -44,7 +45,7 @@ namespace IAmHungry
             for (int i = 0; i < currentInstructions.Length; i++)
             {
                 string currentLine = currentInstructions[i];
-                string textToPrint = $"{bullet} {currentLine}\r\n";
+                string textToPrint = $"{i+1}. {currentLine}\r\n";
                 txtInstruction.Text += textToPrint;
             }
         }

@@ -18,5 +18,10 @@
   "MealType": "snack",
   "TasteTags": [
     "sweet"
+  ],
+  "Instructions": [
+    "First line",
+    "Second line",
+    "Third line"
   ]
 }
